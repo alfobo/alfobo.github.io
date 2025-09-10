@@ -1,0 +1,106 @@
+html{
+	/* background-color: #ffffff; */
+	background-color: rgb(31, 30, 30);
+	font-family: "Arial",sans-serif;
+	color: whitesmoke;
+}
+
+/* Layout */
+.layout{
+	display: grid;
+	grid-template-areas:
+		"menu header"
+		"content content";
+	grid-template-columns: 25% 1fr;
+}
+
+.layout > .pageTitle{
+	grid-area: header;
+	text-wrap: wrap;
+	padding-left: 10px;
+}
+.layout > .navMenu{
+	grid-area: menu;
+	display: grid;
+	text-align: right;
+	row-gap: 2px;
+	border-right: 2px solid whitesmoke;
+}
+
+.layout > article.content{
+	grid-area: content;
+}
+
+/* Buttons/Links */
+a{
+	color: whitesmoke;
+}
+.navMenu a .childbtn{
+	background-color: whitesmoke;
+	color: black;
+	font-weight: bolder;
+	
+	padding-top: 5px;
+	padding-right: 5px;
+	margin-right: 10px;
+}
+.navMenu a:hover .childbtn{
+	animation-name: bgWidth;
+	animation-duration: 50ms;
+	animation-fill-mode: forwards;
+}
+.navMenu a:active .childbtn{
+	animation-name: onSelect;
+	animation-duration: 50ms;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards; 
+}
+
+/* Menu animations */
+@keyframes bgWidth{
+	from{
+		margin-left: 0%;
+		margin-right: 10px;
+	}	
+	to{
+		margin-left: 30%;
+		margin-right: 0px;
+	}
+}
+@keyframes onSelect {
+	from{
+		margin-left: 25%;
+		margin-right: 0px;
+	}
+	to{
+		margin-left: 30%;
+		margin-right: 0px;
+	}
+}
+@keyframes fadeIn {
+	0%{
+		opacity: 0%;
+	}
+	100%{
+		opacity: 100%;
+	}
+}
+
+/* Content */
+.media{
+	text-align:center;
+}
+#doc{
+	height: 100%;
+	margin: auto;
+	max-width: 800px;
+	line-height: 1.2;
+	text-align: justify;
+	font-size: 18px;
+	animation: fadeIn 250ms;
+}
+iframe#page{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
