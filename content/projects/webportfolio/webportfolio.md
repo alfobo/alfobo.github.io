@@ -1,5 +1,6 @@
 # Web portfolio
 **This site**
+[Github link](https://github.com/alfobo/alfobo.github.io)
 ---
 
 Conceived as a way to better show off all my projects, even those not available on github. Say for example, the [MultiSocial](/content/projects/multisocial/multisocial.html) or the [AgriMonitoring](/content/projects/agrimonitoring/agrimonitoring.html) project. This is a static site meant to be displayed on github's pages or any other static website providers. As such, it's simply a combination of HTML, CSS, and javascript.
